@@ -1,13 +1,13 @@
 # IaccSemana8
 Tarea Semana 8 IACC Programación Web II
-# 🌱 Organización Donaciones Web
+# Organización Sin Fines de Lucro IACC 2025
 
-Aplicación web colaborativa desarrollada como parte de la asignatura *Programación Web II* del IACC.  
-Este proyecto permite visualizar proyectos comunitarios, gestionar eventos, recibir donaciones en línea de forma segura y mostrar notificaciones de campañas activas y logros alcanzados por la organización sin fines de lucro.
+Aplicación web colaborativa desarrollada como parte de la asignatura *Programación Web II* de Instituto IACC.  
+Este proyecto permite simular una organización con proyectos comunitarios, gestionar eventos, recibir donaciones en línea de forma segura y mostrar notificaciones de campañas activas y logros alcanzados por la organización sin fines de lucro.
 
 ---
 
-## 🚀 Funcionalidades principales
+## Funcionalidades principales
 
 - 🗂️ Visualización de proyectos activos
 - 📅 Búsqueda y filtrado de eventos por tipo y fecha
@@ -17,7 +17,7 @@ Este proyecto permite visualizar proyectos comunitarios, gestionar eventos, reci
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - HTML5 / CSS3
 - JavaScript (manipulación del DOM)
