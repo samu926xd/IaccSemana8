@@ -24,3 +24,8 @@ Este proyecto permite simular una organización con proyectos comunitarios, gest
 - PHP (procesamiento de formularios)
 - MySQL (gestión de datos)
 - Git y GitHub (control de versiones y colaboración)
+
+  ---
+# Para clonar este repositorio:
+
+ git clone https://github.com/MarcoHRIACC/IaccSemana8.git
