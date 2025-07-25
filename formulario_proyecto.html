@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Proyecto</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        .form-container { background: #fff; padding: 20px; border-radius: 6px; max-width: 600px; margin: auto; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+        .error { color: red; font-size: 14px; }
+        button { background: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Proyecto</h2>
+        <form action="procesar_proyecto.php" method="post" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                <label for="nombre">Nombre del Proyecto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error" id="errorNombre"></span>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="responsable">Responsable:</label>
+                <input type="text" id="responsable" name="responsable" required>
+            </div>
+            <div class="form-group">
+                <label for="presupuesto">Presupuesto ($):</label>
+                <input type="number" id="presupuesto" name="presupuesto" step="0.01" required>
+                <span class="error" id="errorPresupuesto"></span>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de Fin:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Seleccione</option>
+                    <option value="planificacion">Planificación</option>
+                    <option value="en_progreso">En Progreso</option>
+                    <option value="completado">Completado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+            </div>
+            <button type="submit">Registrar Proyecto</button>
+        </form>
+    </div>
+
+    <script>
+        function validarFormulario() {
+            let valido = true;
+            document.getElementById("errorNombre").textContent = "";
+            document.getElementById("errorPresupuesto").textContent = "";
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const presupuesto = parseFloat(document.getElementById("presupuesto").value);
+
+            if (nombre.length < 3) {
+                document.getElementById("errorNombre").textContent = "El nombre debe tener al menos 3 caracteres.";
+                valido = false;
+            }
+            if (isNaN(presupuesto) || presupuesto <= 0) {
+                document.getElementById("errorPresupuesto").textContent = "Ingrese un presupuesto válido.";
+                valido = false;
+            }
+
+            return valido;
+        }
+    </script>
+</body>
+</html>
